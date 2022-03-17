@@ -1,7 +1,5 @@
 git_test:
   script:
-    - apt update 
-    - apt-get -y install git
     - git clone $CLONE_URL src
     - ls src
     
