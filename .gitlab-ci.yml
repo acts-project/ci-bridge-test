@@ -1,14 +1,18 @@
 git_test:
   script:
-    - git clone $CLONE_URL src
-    - ls src
+    - git clone https://github.com/benjaminhuth/ci-bridge-test src
+    - cd src
+    - git checkout gpu-test
+    - ls
     
 gpu_test:
   image: nvidia/cuda:11.6.0-devel-ubuntu20.04
   script:
     - apt update 
     - apt-get -y install git
-    - git clone $CLONE_URL src
-    - ls src
+    - git clone https://github.com/benjaminhuth/ci-bridge-test src    
+    - cd src
+    - git checkout gpu-test
+    - cd ..
     - nvcc src/helloworld.cu -o helloworld
     - ./helloworld
