@@ -1,6 +1,6 @@
 execute:
   script:
-    - echo "I succeed quickly"
+    - echo "I succeed quickly, this text was changed"
 
 
 failing_job:
