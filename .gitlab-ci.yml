@@ -11,6 +11,6 @@ failing_job:
     
 gpu_test:
   image: nvidia/cuda:11.6.0-devel-ubuntu20.04
-  sript:
+  script:
     - nvcc vector_add.cu -o vector_add
     - ./vector_add
