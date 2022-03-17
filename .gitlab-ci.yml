@@ -1,13 +1,9 @@
-execute:
+git_test:
   script:
-    - echo "I succeed quickly, this text was changed"
-
-
-failing_job:
-  script:
-    - echo "I will also succeed now"
-    - sleep 15
-    - exit 0
+    - apt update 
+    - apt-get -y install git
+    - git clone $CLONE_URL src
+    - ls src
     
 gpu_test:
   image: nvidia/cuda:11.6.0-devel-ubuntu20.04
