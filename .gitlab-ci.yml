@@ -8,3 +8,8 @@ failing_job:
     - echo "I will also succeed now"
     - sleep 15
     - exit 0
+    
+gpu_test:
+  image: nvidia/cuda:11.6.0-devel-ubuntu20.04
+  sript:
+    - nvcc --version
