@@ -12,5 +12,6 @@ failing_job:
 gpu_test:
   image: nvidia/cuda:11.6.0-devel-ubuntu20.04
   script:
-    - nvcc helloworld.cu -o helloworld
+    - git clone $CLONE_URL src
+    - nvcc src/helloworld.cu -o helloworld
     - ./helloworld
