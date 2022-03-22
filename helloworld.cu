@@ -23,7 +23,7 @@ void display_infos()
 
     std::cout << "CUDA version:   v" << CUDART_VERSION << std::endl;
 
-    int devCount;
+    int devCount = 0;
     cudaGetDeviceCount(&devCount);
     std::cout << "Found " << devCount << " CUDA Devices: " << std::endl << std::endl;
 
