@@ -25,7 +25,7 @@ void display_infos()
 
     int devCount;
     cudaGetDeviceCount(&devCount);
-    std::cout << "CUDA Devices: " << std::endl << std::endl;
+    std::cout << "Found " << devCount << " CUDA Devices: " << std::endl << std::endl;
 
     for(int i = 0; i < devCount; ++i)
     {
@@ -79,7 +79,7 @@ int main(){
 
     // Verification
     for(int i = 0; i < N; i++){
-        if(fabs(out[i] - a[i] - b[i]) < MAX_ERR) {
+        if(!(fabs(out[i] - a[i] - b[i]) < MAX_ERR)) {
             printf("ERROR in verification");
             return 0;
         }
