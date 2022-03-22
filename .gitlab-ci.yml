@@ -1,5 +1,7 @@
 gpu_test:
   image: nvidia/cuda:11.6.0-devel-ubuntu20.04
+  tags:
+  - docker-gpu-nvidia
   script:
     - apt update 
     - apt-get -y install git
