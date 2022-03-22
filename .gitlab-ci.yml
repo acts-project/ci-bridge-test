@@ -3,10 +3,10 @@ gpu_test:
   script:
     - apt update 
     - apt-get -y install git
-    - git clone https://github.com/benjaminhuth/ci-bridge-test src    
+    - git clone $CLONE_URL src
     - cd src
-    - git checkout gpu-test
+    - git checkout $HEAD_SHA
     - cd ..
-    - nvidia-smi
+    - ls src
     - nvcc src/helloworld.cu -o helloworld
     - ./helloworld
