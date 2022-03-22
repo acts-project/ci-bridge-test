@@ -22,7 +22,6 @@ void display_infos()
     std::cout << "NBody.GPU" << std::endl << "=========" << std::endl << std::endl;
 
     std::cout << "CUDA version:   v" << CUDART_VERSION << std::endl;
-    std::cout << "Thrust version: v" << THRUST_MAJOR_VERSION << "." << THRUST_MINOR_VERSION << std::endl << std::endl;
 
     int devCount;
     cudaGetDeviceCount(&devCount);
