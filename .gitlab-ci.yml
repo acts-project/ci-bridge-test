@@ -1,10 +1,7 @@
 execute:
+  tags:
+    - acts-runner
   script:
     - echo "I succeed quickly"
 
 
-failing_job:
-  script:
-    - echo "I will also succeed now"
-    - sleep 15
-    - exit 0
