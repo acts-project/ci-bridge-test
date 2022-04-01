@@ -1,33 +1,11 @@
-
-
-clang_tidy:
-  image: ghcr.io/acts-project/ubuntu2004:v15
+execute:
   script:
-    - git clone https://github.com/paulgessinger/acts.git --branch clang-tidy-2022
-    - cd acts
-    - ls -al
-    - >
-        apt-get update
-        && apt-get install -y clang-10 clang-tidy-10 g++-8 libstdc++-8-dev
-        && ln -s /usr/bin/clang++-10 /usr/bin/clang++
-        && ln -s /usr/bin/clang-10 /usr/bin/clang
-        && ln -s /usr/bin/clang-tidy-10 /usr/bin/clang-tidy
-        && mkdir -p /opt/lib/gcc/x86_64-linux-gnu
-        && ln -s /usr/lib/gcc/x86_64-linux-gnu/8/ /opt/lib/gcc/x86_64-linux-gnu/ 
-        && clang++ --gcc-toolchain=/opt -v
-    - >
-        cmake -B build -S .
-        -GNinja
-        -DCMAKE_CXX_COMPILER=clang++
-        -DCMAKE_C_COMPILER=clang
-        -DCMAKE_BUILD_TYPE=Release
-        -DCMAKE_CXX_FLAGS="-Werror --gcc-toolchain=/opt"
-        -DACTS_BUILD_EVERYTHING=on
-        -DACTS_RUN_CLANG_TIDY=on
-    # - > 
-        # cmake -B build -S .
-        # -DACTS_BUILD_UNITTESTS=OFF
-        # -DACTS_BUILD_INTEGRATIONTESTS=OFF
-        # -DACTS_BUILD_BENCHMARKS=OFF
-    - cmake --build build --
+    - echo "I succeed quickly"
+    - sleep 30
+    - echo "Done"
 
+long_job:
+  script:
+    - echo "I will also succeed now"
+    - sleep 120
+    - echo "done
