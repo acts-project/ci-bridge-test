@@ -9,3 +9,9 @@ long_job:
     - echo "I will also succeed now"
     - sleep 120
     - echo "done"
+
+job_three:
+  script:
+    - echo "I will fail"
+    - sleep 15
+    - exit 1
