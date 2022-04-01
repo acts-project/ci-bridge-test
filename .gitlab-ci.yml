@@ -5,8 +5,8 @@ execute:
     - echo "Done" > output.txt
 
   artifacts:
-  paths:
-    - output.txt
+    paths:
+      - output.txt
 
 long_job:
   script:
