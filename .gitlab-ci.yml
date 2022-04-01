@@ -1,17 +1,16 @@
 execute:
   script:
     - echo "I succeed quickly"
-    - sleep 30
-    - echo "Done"
+    - sleep 5
+    - echo "Done" > output.txt
+
+  artifacts:
+  paths:
+    - output.txt
 
 long_job:
   script:
     - echo "I will also succeed now"
-    - sleep 120
+    - sleep 10
     - echo "done"
 
-job_three:
-  script:
-    - echo "I will fail"
-    - sleep 15
-    - exit 1
