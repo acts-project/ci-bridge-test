@@ -8,4 +8,4 @@ long_job:
   script:
     - echo "I will also succeed now"
     - sleep 120
-    - echo "done
+    - echo "done"
