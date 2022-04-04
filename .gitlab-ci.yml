@@ -3,6 +3,7 @@ gpu_test:
   tags:
   - docker-gpu-nvidia
   script:
+    - echo $PATH
     - apt update 
     - apt-get -y install git
     - git clone $CLONE_URL src
