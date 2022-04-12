@@ -1,10 +1,7 @@
 execute:
   script:
     - echo "I succeed quickly"
+    - echo $CLONE_URL
+    - echo $HEAD_SHA
 
 
-failing_job:
-  script:
-    - echo "I will also succeed now"
-    - sleep 15
-    - exit 0
